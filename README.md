@@ -59,6 +59,21 @@ docker stop silly_image
 ```exec``` command is use when you need to write a command for an specific running container, you only need to write: ```docker exec silly_image cat /etc/hosts```.
 
 
+#### docker run command
+
+```docker run -i mmussa/afjas-sfac-ass``` giving the flag of -i allows to use input prompt.
+
+```docker run -d mmussa/afjas-sfac-ass``` giving the flag of -d allows to run the container in a background mode.
+
+```docker run -p 80:5000 mmussa/afjas-sfac-ass``` allows you to map the port of the internal docker host with the browser outside the host. This is very useful when you're running differents applications.
+
+#### Persisiting data into our containers
+
+```docker run -v /opt/datadir:/var/lib/mysql mysql``` this make use of volumes for persisting data.
+
+ 
+
+
 
 
 
