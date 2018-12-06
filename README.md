@@ -92,7 +92,13 @@ ENTRYPOINT FASK_APP= | /opt/source-code/app.py flask run
 
 ```docker buid dockerfile -t billiramirez/my-custom-app``` It creates a layered architecture. Each layer is a command.
 
+apt-get update
+apt-get install python
+apt-get install python-pip
+pip install flask
+/opt/app.py
 
+FLASK_APP=/opt/app.py flask run --host=0.0.0.0
 
 
 
