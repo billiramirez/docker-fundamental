@@ -59,7 +59,7 @@ docker stop silly_image
 ```exec``` command is use when you need to write a command for an specific running container, you only need to write: ```docker exec silly_image cat /etc/hosts```.
 
 
-#### docker run command
+## docker run command
 
 ```docker run -i mmussa/afjas-sfac-ass``` giving the flag of -i allows to use input prompt.
 
@@ -71,8 +71,26 @@ docker stop silly_image
 
 ```docker run -v /opt/datadir:/var/lib/mysql mysql``` this make use of volumes for persisting data.
 
- 
+```docker attach lkjali323fa ``` brings you back the process of a container was in background.
 
+
+ ## Creating a Dockerfile
+
+ DockerFile
+
+Instruction  | Argument
+------------ | -------------
+FROM | Ubuntu
+RUN | apt-get update
+RUN | apt-get install python
+RUN | pip install flask
+RUN | pip install mysql
+COPY | . /opt/source-code
+ENTRYPOINT FASK_APP= | /opt/source-code/app.py flask run
+
+#### Creating our image
+
+```docker buid dockerfile -t billiramirez/my-custom-app``` It creates a layered architecture. Each layer is a command.
 
 
 
